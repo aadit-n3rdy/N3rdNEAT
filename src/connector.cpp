@@ -1,5 +1,5 @@
-#include "connector.h"
-#include "node.h"
+#include "../include/N3rdNEAT/connector.h"
+#include "../include/N3rdNEAT/node.h"
 
 Connector::Connector() {
   from = nullptr;

@@ -1,5 +1,6 @@
-#include "neural_network.h"
-#include "node.h"
+#include "../include/N3rdNEAT/neural_network.h"
+#include "../include/N3rdNEAT/node.h"
+
 
 #include <cstdlib>
 #include <list>

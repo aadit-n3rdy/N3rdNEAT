@@ -1,8 +1,8 @@
-#include "node.h"
+#include "../include//N3rdNEAT/node.h"
 #include <list>
 #include <vector>
 #include <iostream>
-#include "connector.h"
+#include "../include/N3rdNEAT/connector.h"
 #include <cmath>
 
 double Node::sigmoid(double input) {
