@@ -7,17 +7,18 @@ class Connector;
 class Node;
 
 class NeuralNetwork {
-private:
-  std::vector<Node *> nodes;
-  std::vector<Connector *> connectors;
-  Node *inputNodes;
-  Node *outputNodes;
-  int inputNodeCount;
-  int outputNodeCount;
+	private:
+		std::vector<Node *> nodes;
+		std::vector<Connector *> connectors;
+		Node *inputNodes;
+		Node *outputNodes;
+		int inputNodeCount;
+		int outputNodeCount;
 
-public:
-  NeuralNetwork(int input, int output);
-  std::vector<double> *calc(const std::vector<double> *input);
+	public:
+		NeuralNetwork(int input, int output);
+		NeuralNetwork();
+		std::vector<double> *calc(const std::vector<double> *input);
 };
 
 #endif
