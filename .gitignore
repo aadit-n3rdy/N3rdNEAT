@@ -1,3 +1,11 @@
 bin/*
 obj/*
 Makefile
+.cache/**
+.ccls-cache/**
+CMakeFiles/**
+**.a
+**.so
+compile_commands.json
+cmake_install.cmake
+**.make

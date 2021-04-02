@@ -1,8 +1,9 @@
-#ifndef N3RD_NEAT_NETWORK_H
-#define N3RD_NEAT_NETWORK_H
+#pragma once
 
 #include <vector>
+#include <random>
 
+namespace n3neat {
 class Connector;
 class Node;
 
@@ -14,11 +15,14 @@ class NeuralNetwork {
 		Node *outputNodes;
 		int inputNodeCount;
 		int outputNodeCount;
+		std::minstd_rand randGen;
 
 	public:
 		NeuralNetwork(int input, int output);
 		NeuralNetwork();
-		std::vector<double> *calc(const std::vector<double> *input);
+		~NeuralNetwork();
+		void calc(double* input, double* output);
+		int mutate();
 };
+}
 
-#endif
