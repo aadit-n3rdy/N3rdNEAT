@@ -6,27 +6,27 @@
 #include "../include/N3rdNEAT/connector.h"
 #include <cmath>
 
-double n3neat::Node::sigmoid(double input) {
+double Node::sigmoid(double input) {
 	input = std::exp(input);
 	return input/(std::abs(input)+(double)1);
 }
 
 
-n3neat::Node::Node() {
+Node::Node() {
 	val = 0;
 	from = std::vector<Connector *>();
 	to = std::vector<Connector *>();
 	generation=0;
 }
 
-n3neat::Node::Node(double gen) {
+Node::Node(double gen) {
 	val = 0;
 	from = std::vector<Connector *>();
 	to = std::vector<Connector *>();
 	generation = gen;
 }
 
-void n3neat::Node::removeFromConnector(Connector* connector) {
+void Node::removeFromConnector(Connector* connector) {
 	int len = from.size();
 	int index = 0;
 	bool end = false;
@@ -44,7 +44,7 @@ void n3neat::Node::removeFromConnector(Connector* connector) {
 	}
 }
 
-void n3neat::Node::removeToConnector(Connector* connector) {
+void Node::removeToConnector(Connector* connector) {
 	int len = to.size();
 	int index = 0;
 	bool end = false;
@@ -61,7 +61,7 @@ void n3neat::Node::removeToConnector(Connector* connector) {
 		to.erase(to.begin() + index);
 	}
 }
-void n3neat::Node::calc() {
+void Node::calc() {
 	if(updated == 0) {
 		updated = 1;
 		if(generation == 0) {
@@ -121,7 +121,7 @@ void n3neat::Node::calc() {
 		std::cout << "LOG: Already updated\n";
 	}
 }
-n3neat::Node::~Node() {
+Node::~Node() {
 	int fromLen = from.size();
 	int toLen = to.size();
 	for(int i = 0; i < fromLen; i++) {

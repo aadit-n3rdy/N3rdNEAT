@@ -5,7 +5,7 @@
 #include <cstdlib>
 #include <iostream>
 
-n3neat::NeuralNetwork::NeuralNetwork(int input, int output) {
+NeuralNetwork::NeuralNetwork(int input, int output) {
 	inputNodeCount = input;
 	outputNodeCount = output;
 	for(int i = 0; i < input; i++) {
@@ -18,15 +18,15 @@ n3neat::NeuralNetwork::NeuralNetwork(int input, int output) {
 	randGen = std::minstd_rand(dev());
 }
 
-n3neat::NeuralNetwork::NeuralNetwork() {
+NeuralNetwork::NeuralNetwork() {
 	inputNodeCount = 3;
 	outputNodeCount = 3;
 }
 
-n3neat::NeuralNetwork::~NeuralNetwork() {
+NeuralNetwork::~NeuralNetwork() {
 }
 
-void n3neat::NeuralNetwork::calc(double* input, double* output) {
+void NeuralNetwork::calc(double* input, double* output) {
 	if(input==nullptr || output == nullptr) {
 		std::__throw_invalid_argument("ERROR: argument of NeuralNetwork::calc was nullptr");
 	}
@@ -47,7 +47,7 @@ void n3neat::NeuralNetwork::calc(double* input, double* output) {
 	}
 }
 
-int n3neat::NeuralNetwork::mutate() {
+int NeuralNetwork::mutate() {
 	std::cout << "LOG: Started neural_network mutate\n";
 	int action = rand()%2;
 	Node node;

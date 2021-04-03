@@ -3,7 +3,6 @@
 #include <vector>
 #include <random>
 
-namespace n3neat {
 class Connector;
 class Node;
 
@@ -24,5 +23,4 @@ class NeuralNetwork {
 		void calc(double* input, double* output);
 		int mutate();
 };
-}
 
