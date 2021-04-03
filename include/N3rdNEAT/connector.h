@@ -3,7 +3,6 @@
 
 #include "neural_network.h"
 
-namespace n3neat {
 class Node;
 
 class Connector {
@@ -22,7 +21,6 @@ class Connector {
 		inline void setConnectionWeight(double connectionWeight) { weight = connectionWeight; }
 		friend NeuralNetwork;
 };
-}
 
 #endif
 

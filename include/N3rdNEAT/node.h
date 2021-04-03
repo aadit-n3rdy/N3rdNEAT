@@ -2,7 +2,6 @@
 #define N3RD_NEAT_NODE_H
 
 #include <vector>
-namespace n3neat {
 class Connector;
 class NeuralNetwork;
 
@@ -29,6 +28,5 @@ class Node {
 		inline bool isObsolete() {return (from.size()==0) || (to.size()==0);}
 		friend NeuralNetwork;
 };
-}
 
 #endif

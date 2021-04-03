@@ -57,10 +57,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/n3rdy/dev/cpp/Darwin/N3rdNEAT
+CMAKE_SOURCE_DIR = /home/n3rdy/dev/godot/Darwin/N3rdNEAT
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/n3rdy/dev/cpp/Darwin/N3rdNEAT
+CMAKE_BINARY_DIR = /home/n3rdy/dev/godot/Darwin/N3rdNEAT
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -87,9 +87,9 @@ edit_cache/fast: edit_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/n3rdy/dev/cpp/Darwin/N3rdNEAT/CMakeFiles /home/n3rdy/dev/cpp/Darwin/N3rdNEAT//CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/n3rdy/dev/godot/Darwin/N3rdNEAT/CMakeFiles /home/n3rdy/dev/godot/Darwin/N3rdNEAT//CMakeFiles/progress.marks
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/n3rdy/dev/cpp/Darwin/N3rdNEAT/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/n3rdy/dev/godot/Darwin/N3rdNEAT/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -128,6 +128,67 @@ N3rdNEAT: cmake_check_build_system
 N3rdNEAT/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/N3rdNEAT.dir/build.make CMakeFiles/N3rdNEAT.dir/build
 .PHONY : N3rdNEAT/fast
+
+#=============================================================================
+# Target rules for targets named godot-cpp
+
+# Build rule for target.
+godot-cpp: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 godot-cpp
+.PHONY : godot-cpp
+
+# fast build rule for target.
+godot-cpp/fast:
+	$(MAKE) $(MAKESILENT) -f godot-cpp/CMakeFiles/godot-cpp.dir/build.make godot-cpp/CMakeFiles/godot-cpp.dir/build
+.PHONY : godot-cpp/fast
+
+src/GodotLibrary.o: src/GodotLibrary.cpp.o
+.PHONY : src/GodotLibrary.o
+
+# target to build an object file
+src/GodotLibrary.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/N3rdNEAT.dir/build.make CMakeFiles/N3rdNEAT.dir/src/GodotLibrary.cpp.o
+.PHONY : src/GodotLibrary.cpp.o
+
+src/GodotLibrary.i: src/GodotLibrary.cpp.i
+.PHONY : src/GodotLibrary.i
+
+# target to preprocess a source file
+src/GodotLibrary.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/N3rdNEAT.dir/build.make CMakeFiles/N3rdNEAT.dir/src/GodotLibrary.cpp.i
+.PHONY : src/GodotLibrary.cpp.i
+
+src/GodotLibrary.s: src/GodotLibrary.cpp.s
+.PHONY : src/GodotLibrary.s
+
+# target to generate assembly for a file
+src/GodotLibrary.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/N3rdNEAT.dir/build.make CMakeFiles/N3rdNEAT.dir/src/GodotLibrary.cpp.s
+.PHONY : src/GodotLibrary.cpp.s
+
+src/N3rdNEAT.o: src/N3rdNEAT.cpp.o
+.PHONY : src/N3rdNEAT.o
+
+# target to build an object file
+src/N3rdNEAT.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/N3rdNEAT.dir/build.make CMakeFiles/N3rdNEAT.dir/src/N3rdNEAT.cpp.o
+.PHONY : src/N3rdNEAT.cpp.o
+
+src/N3rdNEAT.i: src/N3rdNEAT.cpp.i
+.PHONY : src/N3rdNEAT.i
+
+# target to preprocess a source file
+src/N3rdNEAT.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/N3rdNEAT.dir/build.make CMakeFiles/N3rdNEAT.dir/src/N3rdNEAT.cpp.i
+.PHONY : src/N3rdNEAT.cpp.i
+
+src/N3rdNEAT.s: src/N3rdNEAT.cpp.s
+.PHONY : src/N3rdNEAT.s
+
+# target to generate assembly for a file
+src/N3rdNEAT.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/N3rdNEAT.dir/build.make CMakeFiles/N3rdNEAT.dir/src/N3rdNEAT.cpp.s
+.PHONY : src/N3rdNEAT.cpp.s
 
 src/connector.o: src/connector.cpp.o
 .PHONY : src/connector.o
@@ -210,6 +271,13 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... N3rdNEAT"
+	@echo "... godot-cpp"
+	@echo "... src/GodotLibrary.o"
+	@echo "... src/GodotLibrary.i"
+	@echo "... src/GodotLibrary.s"
+	@echo "... src/N3rdNEAT.o"
+	@echo "... src/N3rdNEAT.i"
+	@echo "... src/N3rdNEAT.s"
 	@echo "... src/connector.o"
 	@echo "... src/connector.i"
 	@echo "... src/connector.s"
